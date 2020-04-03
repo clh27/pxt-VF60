@@ -12,13 +12,13 @@ namespace VF60 {
     }
 
     /**
-     * setze Cursor
+     * setze Cursor auf (col, row)
      * @param col Spalte (1..20)
      * @param row Zeile (1..2)
      */
     //% block
     export function setCursor(col: number, row: number): void {
-        if (row > 0 && row < 2 && col > 0 && col < 21) {
+        if (row > 0 && row < 3 && col > 0 && col < 21) {
             serial.writeString("\027[");
             serial.writeString(col + "");
             serial.writeString(";");
