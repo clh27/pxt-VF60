@@ -12,7 +12,7 @@ namespace VF60 {
     }
 
     /**
-     * initialize serial display
+     * setze Cursor
      * @param col Spalte (1..20)
      * @param row Zeile (1..2)
      */
@@ -25,6 +25,15 @@ namespace VF60 {
             serial.writeString(row + "");
             serial.writeString("H");
         }
+    }
+
+    /**
+     * erase toEOL
+     * @param lösche bis Zeilenende
+     */
+    //% block
+    export function clrEOL(): void {
+        serial.writeString("\027[0K");
     }
 
 }
