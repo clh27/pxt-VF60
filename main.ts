@@ -20,9 +20,9 @@ namespace VF60 {
     export function setCursor(col: number, row: number): void {
         if (row > 0 && row < 2 && col > 0 && col < 21) {
             serial.writeString("\027[");
-            serial.writeString(col);
+            serial.writeString(col + "");
             serial.writeString(";");
-            serial.writeString(row);
+            serial.writeString(row + "");
             serial.writeString("H");
         }
     }
